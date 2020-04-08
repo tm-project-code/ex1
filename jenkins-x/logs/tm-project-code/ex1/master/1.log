@@ -1,0 +1,121 @@
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-rtzzt[0m
+{"level":"warn","ts":1586339280.2982368,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586339280.2987285,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vd2cm[0m
+{"level":"warn","ts":1586339281.418211,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1586339281.4199047,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-tm-project-code-ex1-master-5jvsz-jwl9w[0m
+{"level":"warn","ts":1586339289.5034373,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586339290.8738208,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/tm-project-code/ex1.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:5e47ae4dbad6b0df23767715b0c1be669bab977d
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Resolved base name python:onbuild to python:onbuild 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name python:onbuild to python:onbuild 
+[36mINFO[0m[0000] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0001] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0003] Retrieving image manifest python:onbuild     
+[36mINFO[0m[0003] Executing 3 build triggers                   
+[36mINFO[0m[0003] Checking for cached layer 10.0.58.187:5000/todo/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66... 
+[36mINFO[0m[0003] No cached layer found for cmd COPY requirements.txt /usr/src/app/ 
+[36mINFO[0m[0003] cmd: EXPOSE                                  
+[36mINFO[0m[0003] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0003] Unpacking rootfs as cmd COPY requirements.txt /usr/src/app/ requires it. 
+[36mINFO[0m[0019] Taking snapshot of full filesystem...        
+[36mINFO[0m[0036] Resolving paths                              
+[36mINFO[0m[0040] COPY requirements.txt /usr/src/app/          
+[36mINFO[0m[0040] Resolving paths                              
+[36mINFO[0m[0040] Taking snapshot of files...                  
+[36mINFO[0m[0040] Pushing layer 10.0.58.187:5000/todo/cache:4603157fb951c8b4502529c64ddc571c85e381ce4686ea05728e14a56a118e66 to cache now 
+[36mINFO[0m[0040] RUN pip install --no-cache-dir -r requirements.txt 
+[36mINFO[0m[0040] cmd: /bin/sh                                 
+[36mINFO[0m[0040] args: [-c pip install --no-cache-dir -r requirements.txt] 
+You are using pip version 10.0.1, however version 20.0.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+[36mINFO[0m[0041] Taking snapshot of full filesystem...        
+[36mINFO[0m[0042] Resolving paths                              
+[36mINFO[0m[0044] Pushing layer 10.0.58.187:5000/todo/cache:26208b704f381cfc1f456d1b1b9697de2e61930f2b836f1a4480488b7e191354 to cache now 
+[36mINFO[0m[0044] COPY . /usr/src/app                          
+[36mINFO[0m[0044] Resolving paths                              
+[36mINFO[0m[0044] Taking snapshot of files...                  
+[36mINFO[0m[0044] Pushing layer 10.0.58.187:5000/todo/cache:e5290422588fc4daa45c9a1c82e6d461923dcee1af09f0f30c1d704f58c194ee to cache now 
+[36mINFO[0m[0044] COPY requirements.txt .                      
+[36mINFO[0m[0044] Resolving paths                              
+[36mINFO[0m[0044] Taking snapshot of files...                  
+[36mINFO[0m[0044] ENV PORT 8080                                
+[36mINFO[0m[0044] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0044] EXPOSE 8080                                  
+[36mINFO[0m[0044] cmd: EXPOSE                                  
+[36mINFO[0m[0044] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0044] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0044] ENTRYPOINT ["python"]                        
+[36mINFO[0m[0044] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0044] CMD ["app.py"]                               
+[36mINFO[0m[0044] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0045] Pushing layer 10.0.58.187:5000/todo/cache:1f70e14d751c2d55e8b90b269001a56341ed3f741e3f892f4227acf45eefd6ba to cache now 
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/ex1 to an unshallow repository
+Generating change log from git ref 84608e84447585deb2bf191bae0d4c3dcc4baecc => aea79deb368396f2991747ca66152887d0ac1fb8
+Associating user x-0 in users.jenkins.io with email vincent.vanouytsel@trendminer.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 5e47ae4dbad6b0df23767715b0c1be669bab977d with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email vincent.vanouytsel@trendminer.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 5e47ae4dbad6b0df23767715b0c1be669bab977d with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for tm-project-code/ex1 and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/tm-project-code/ex1/releases/tag/v0.0.1
+generated: /workspace/source/charts/ex1/templates/release.yaml
+Created Release ex1-0-0-1 resource in namespace **
+Updating PipelineActivity tm-project-code-ex1-master-1 with version 0.0.1
+Updated PipelineActivities tm-project-code-ex1-master-1 with release notes URL: https://github.com/tm-project-code/ex1/releases/tag/v0.0.1
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file ex1-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mtm-project-code-ex1-master-5jvsz-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app ex1 version 0.0.1 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/tm-project-code/environment-projectcode**-staging/pull/8
+Added label updatebot to Pull Request https://github.com/tm-project-code/environment-projectcode**-staging/pull/8
+got git provider status pending from PR https://github.com/tm-project-code/environment-projectcode**-staging/pull/8
+got git provider status pending from PR https://github.com/tm-project-code/environment-projectcode**-staging/pull/8
+got git provider status pending from PR https://github.com/tm-project-code/environment-projectcode**-staging/pull/8
+got git provider status pending from PR https://github.com/tm-project-code/environment-projectcode**-staging/pull/8
+Pull Request https://github.com/tm-project-code/environment-projectcode**-staging/pull/8 is merged at sha e67f337e2a2e4603776105b79ac20b6e49e56cf3
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names ex1, **-ex1, **-staging-ex1
